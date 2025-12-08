@@ -1,5 +1,5 @@
 # docker compose stack for wordpress
-Huge shoutout to [Bitnami](https://github.com/bitnami) to give us access to powerful, headache-free config, and secure docker images.
+Huge shout-out to [Bitnami](https://github.com/bitnami) to give us access to powerful, headache-free config, and secure docker images.
 
 ## File structure
 
@@ -18,8 +18,8 @@ Huge shoutout to [Bitnami](https://github.com/bitnami) to give us access to powe
 ## Services
 
 The stack consists of two services:
-1. `mariadb`: mysql server
-2. `wordpress`: wordpress server with php-fpm enabled
+1. `mariadb`: Database server
+2. `wordpress`: wordpress server, with its own web server
 
 These services (containers) communicate with each other inside their own network: `wp_bitnami_network`.
 The name of the services are important because docker compose will use them as hostname
@@ -34,7 +34,7 @@ Bitnami hardened MariaDB [image](https://hub.docker.com/r/bitnami/mariadb)
 Bitnami hardened Wordpress [image](https://hub.docker.com/r/bitnami/wordpress)
 
 #### .env
-Environment variables used by docker compose. To see all environment variables available: 
+Environment variables used by docker compose. For a complete list of available environment variables: 
 - mariadb: [Customizable environment variables](https://github.com/bitnami/containers/tree/main/bitnami/mariadb#customizable-environment-variables)
 - wordpress: [Customizable environment variables](https://github.com/bitnami/containers/blob/main/bitnami/wordpress/README.md#customizable-environment-variables)
 
